@@ -1,0 +1,6 @@
+language: go
+notificaitons:
+  email:
+    recipients: tim.lomax@live.co.uk
+    on_success: change
+    on_failure: always

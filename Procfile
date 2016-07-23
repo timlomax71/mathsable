@@ -1,1 +1,1 @@
-'web: mathsable' 
+web: mathsable 

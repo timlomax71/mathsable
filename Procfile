@@ -1,1 +1,1 @@
-'web: demoapp' 
+'web: mathsable' 

@@ -6,6 +6,7 @@ import (
   "log"
   "io"
   "time"
+  "os"
 )
 
 const STATIC_URL string = "/www/static/"
@@ -47,5 +48,5 @@ func StaticHandler(w http.ResponseWriter, req *http.Request) {
 func main() {
   http.HandleFunc("/", handler)
   http.HandleFunc(STATIC_URL, StaticHandler)
-  http.ListenAndServe(":8081", nil)
+  http.ListenAndServe(":" + os.Getenv("PORT"), nil)
 }

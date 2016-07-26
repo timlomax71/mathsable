@@ -1,13 +1,13 @@
 {{ define "login" }}
 
-<link rel="stylesheet" type="text/css" href="../css/login.css" />
+<link rel="stylesheet" type="text/css" href="../static/css/login.css" />
 
 <!-- Login window is a modal dialog -->
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
   <div class="modal-dialog">
     <div class="loginmodal-container">
       <a id="login-logo" href="#">
-        <span><img alt="Brand" src="../img/brain-small.jpg" /></span>
+        <span><img alt="Brand" src="../static/img/brain-small.jpg" /></span>
         mathsABLe
       </a>
 
@@ -15,7 +15,7 @@
         <div class="dropdown">
           <button id="schoolDropdown" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             <a href="#">Select school</a>
-            <span class="caret"/>
+            <span class="caret">
           </button>
 
           <ul class="dropdown-menu" aria-labelledby="schoolDropdown">

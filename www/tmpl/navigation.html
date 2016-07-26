@@ -1,0 +1,40 @@
+{{ define "navigation" }}
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="#">
+        <span><img alt="Brand" src="../img/brain-small.jpg" /></span>
+          mathsABLe
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="myNavBar">
+      <ul class="nav navbar-nav text-uppercase">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Management</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Exercise</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right text-uppercase">
+        <li>
+          <a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+
+{{ end }}

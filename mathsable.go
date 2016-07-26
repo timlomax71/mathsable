@@ -1,16 +1,16 @@
 package main
 
 import (
-	"fmt"
-	"net/http"
-	"os"
+  "net/http"
+  "html/template"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hi there, I love %s!", r.URL.Path[1:])
+  t, _ := template.ParseFiles("./tmpl/layout.html", "./tmpl/head.html", "./tmpl/login.html", "./tmpl/naviagtion.html")
+  t.ExecuteTemplate(w, "layout", "")
 }
 
 func main() {
-	http.HandleFunc("/", handler)
-	http.ListenAndServe(":"+os.Getenv("PORT"), nil)
+  http.HandleFunc("/", handler)
+  http.ListenAndServe(":8081", nil)
 }

@@ -1,0 +1,45 @@
+{{ define "login" }}
+
+<link rel="stylesheet" type="text/css" href="../css/login.css" />
+
+<!-- Login window is a modal dialog -->
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="loginmodal-container">
+      <a id="login-logo" href="#">
+        <span><img alt="Brand" src="../img/brain-small.jpg" /></span>
+        mathsABLe
+      </a>
+
+      <form>
+        <div class="dropdown">
+          <button id="schoolDropdown" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <a href="#">Select school</a>
+            <span class="caret"/>
+          </button>
+
+          <ul class="dropdown-menu" aria-labelledby="schoolDropdown">
+            <li><a href="#">Mathsable</a></li>
+            <li><a href="#">Another school</a></li>
+          </ul>
+        </div>
+
+        <input type="text" name="user" placeholder="Username">
+        <input type="password" name="pass" placeholder="Password">
+        <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+      </form>
+
+      <div class="login-help">
+        <a href="#">Register</a> - <a href="#">Forgot Password</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('.dropdown-menu a').on('click', function() {
+    $('.dropdown-toggle').html($(this).html() + '<span class="caret"></span>');
+  })
+</script>
+
+{{ end }}

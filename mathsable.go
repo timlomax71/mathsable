@@ -46,7 +46,14 @@ func StaticHandler(w http.ResponseWriter, req *http.Request) {
 }
 
 func main() {
+  port := os.Getenv("PORT")
+  if len(port) == 0 {
+    port = "8081"
+  }
+
+  log.Print("Listening on port: " + port)
+
   http.HandleFunc("/", handler)
   http.HandleFunc(STATIC_URL, StaticHandler)
-  http.ListenAndServe(":" + os.Getenv("PORT"), nil)
+  http.ListenAndServe(":" + port, nil)
 }
